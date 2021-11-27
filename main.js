@@ -29,7 +29,7 @@ function gotResult(error, results)
       console.log(results);
       previousResult=results[0].label;
       var synth=window.speechsynthesis;
-      speakData='object detected is '+result[0].label;
+      speakData='object detected is '+results[0].label;
       var utterThis=new SpeechSynthesisUtterance(speakData);
       synth.speak(utterThis);
       document.getElementById("result_object_name").innerHTML=results[0].label;
